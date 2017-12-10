@@ -1,0 +1,29 @@
+{
+  "name": "mean-auth-app",
+  "version": "1.0.0",
+  "description": "Mean Auth App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express":"*",
+    "mongoose":"*",
+    "body-parser": "*",
+    "cors":"*",
+    "bcryptjs":"*",
+    "jsonwebtoken": "*",
+    "passport":"*",
+    "passport-jwt":"*"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sharvanand/mean-auth-app.git"
+  },
+  "author": "Sharvanand Thiru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sharvanand/mean-auth-app/issues"
+  },
+  "homepage": "https://github.com/Sharvanand/mean-auth-app#readme"
+}
