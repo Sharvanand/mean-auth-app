@@ -13,11 +13,12 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 const appRoutes : Routes = [
-    {path:'', component:HomeComponent,pathMatch:'full'},
-    {path:'register', component: RegisterComponent},
-    {path:'login', component: LoginComponent},
-    {path:'dashboard', component: DashboardComponent},
-    {path:'profile', component: ProfileComponent}
+    {path:'', redirectTo:'/home',pathMatch:'full'},
+    {path:'home', component:HomeComponent},
+    {path:'register', component:RegisterComponent},
+    {path:'login', component:LoginComponent},
+    {path:'dashboard', component:DashboardComponent},
+    {path:'profile', component:ProfileComponent}
 ];
 
 @NgModule({
