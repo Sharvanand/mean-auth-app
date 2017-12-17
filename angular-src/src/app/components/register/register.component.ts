@@ -7,17 +7,15 @@ import { ValidateService } from '../../services/validate.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+      name : String;
+      email: String;
+      username:String;
+      password:String;
 
-  name:String;
-  email:String;
-  username:String;
-  password:String;
-
-  constructor(private validateService:ValidateService) { }
+  constructor( private validateService:ValidateService) { }
 
   ngOnInit() {
   }
-   
   onRegisterSubmit(){
     const user = {
       name:this.name,
@@ -25,11 +23,13 @@ export class RegisterComponent implements OnInit {
       username:this.username,
       password:this.password
     }
-    // Validate Register
+    // Validate Register ..
     if(!this.validateService.validateRegister(user)){
-      console.log("Please fill all  fields..")
-      return false;
+      console.log("Please fill all fields.. ");
+    return false;
+
     }
+    // Validate Email..
     if(!this.validateService.validateEmail(user.email)){
       console.log("Please enter valid email..");
       return false;
